@@ -1,0 +1,21 @@
+[project]
+name = "codetutor"
+version = "0.1.0"
+description = "An interactive CLI tool that guides users through coding topics using OpenAI."
+authors = ["Your Name <your@email.com>"]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+
+dependencies = [
+    "openai",
+    "python-dotenv"
+]
+
+[project.scripts]
+codetutor = "codetutor.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
