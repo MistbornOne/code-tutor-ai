@@ -1,6 +1,6 @@
 # Code Tutor AI 🧙🏼‍♂️
 
-An AI-powered interactive CLI coding tutor built with OpenAI.
+## An AI-powered interactive CLI coding tutor built with OpenAI Agent SDK.
 
 **Code Tutor** is built to allow you to _learn_ to code yourself rather than just vibe code your way to success. This AI agent is supportive and uses the **Socractic method** to walk you, the coding student, through solving the problem on your own with guidance.
 
@@ -12,10 +12,12 @@ If you happen to get stuck and truly can't figure the problem out, you can ask C
 
 ## Getting Started 🚀
 
+---
+
 ### Requirements 📦
 
 - [Docker](https://www.docker.com/)
-- An OpenAI API key
+- An [OpenAI API key](https://platform.openai.com/api-keys)
 
 ---
 
@@ -45,6 +47,8 @@ OPENAI_API_KEY=sk-...
 **Never Share This! ❌**
 
 If you use Git to version control, make sure you add your .env to a .gitignore file _before_ you do so.
+
+#### Run the Code Tutor! 🔥
 
 ```bash
 ./run.sh
@@ -80,9 +84,13 @@ OPENAI_API_KEY=sk-...
 
 If you use Git to version control, make sure you add your .env to a .gitignore file _before_ you do so.
 
+#### Build Docker Image
+
 ```bash
 docker build -t codetutor .
 ```
+
+#### Run the Code Tutor with Docker! 🔥
 
 ```bash
 docker run -it --rm \
@@ -94,14 +102,17 @@ docker run -it --rm \
 
 **What this does:**
 
-> --env-file .env loads your OpenAI API key
-> -v ~/Documents/conversations:/logs mounts your conversation log folder
-> codetutor is the name of the image you built (or pulled)
-> Make sure the .env file exists in your current directory.
+`--env-file .env` loads your OpenAI API key
+
+`-v ~/Documents/conversations:/logs` mounts your conversation log folder
+
+`codetutor` is the name of the image you built (or pulled)
+
+> 💡 Make sure the `.env` file exists in your current directory.
 
 ---
 
-### Change AI Model 🔄
+## Change AI Model 🔄
 
 You will be prompted on first run to choose a model, which will persist until you force a change with the command below:
 
