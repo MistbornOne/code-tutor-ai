@@ -28,7 +28,7 @@ async def tutor(force_model_select=False):
     )
 
     history = []
-    print("What coding topic are we covering today?\nUse [q] to quit\n")
+    print("\nWhat coding topic are we covering today?\nUse [q] to quit\n")
 
     while True:
         user_input = await asyncio.to_thread(input, "You: ")
